@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV de Santiago Orozco Salcedo - Ingeniería en Negocios, manufactura, logística y análisis operativo">
+  <title>CV | Santiago Orozco Salcedo</title>
+  <style>
+    :root{
+      --navy:#172033;
+      --blue:#2563eb;
+      --blue-soft:#eaf1ff;
+      --text:#243047;
+      --muted:#64748b;
+      --line:#dbe2ea;
+      --bg:#f5f7fb;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+
+    header{
+      background:linear-gradient(135deg,var(--navy),#243b67);
+      color:white;
+      padding:58px 0 48px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:35px;
+      align-items:center;
+    }
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:.78rem;
+      color:#b9cdfd;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    h1{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.05;
+      margin-bottom:14px;
+    }
+    .headline{
+      font-size:1.15rem;
+      color:#dbe7ff;
+      max-width:720px;
+    }
+    .contact-card{
+      min-width:285px;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:18px;
+      padding:22px;
+      backdrop-filter:blur(8px);
+    }
+    .contact-card div{margin:8px 0;font-size:.95rem}
+    .contact-card strong{display:block;color:#b9cdfd;font-size:.74rem;text-transform:uppercase;letter-spacing:1px}
+
+    nav{
+      position:sticky;top:0;z-index:10;
+      background:white;border-bottom:1px solid var(--line);
+    }
+    nav .container{display:flex;gap:24px;overflow:auto;padding:13px 0}
+    nav a{font-size:.9rem;font-weight:700;color:var(--muted);white-space:nowrap}
+    nav a:hover{color:var(--blue)}
+
+    main{padding:45px 0}
+    section{margin-bottom:42px}
+    .section-title{
+      display:flex;align-items:center;gap:12px;
+      margin-bottom:20px;
+      color:var(--navy);
+      font-size:1.65rem;
+    }
+    .section-title::before{
+      content:"";width:7px;height:28px;background:var(--blue);border-radius:8px;
+    }
+
+    .about{
+      background:white;border:1px solid var(--line);border-radius:18px;
+      padding:27px;box-shadow:0 8px 25px rgba(23,32,51,.05);
+      font-size:1.04rem;
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .card{
+      background:white;border:1px solid var(--line);border-radius:18px;
+      padding:24px;box-shadow:0 8px 25px rgba(23,32,51,.05);
+    }
+    .card h3{color:var(--navy);margin-bottom:6px}
+    .meta{color:var(--blue);font-weight:700;font-size:.9rem;margin-bottom:10px}
+    .muted{color:var(--muted)}
+
+    .timeline{position:relative;margin-left:10px}
+    .job{
+      position:relative;
+      padding:0 0 28px 30px;
+      border-left:2px solid #cbd5e1;
+    }
+    .job:last-child{border-left-color:transparent}
+    .job::before{
+      content:"";position:absolute;left:-8px;top:4px;
+      width:14px;height:14px;border-radius:50%;
+      background:var(--blue);border:3px solid var(--bg);
+    }
+    .job h3{font-size:1.2rem;color:var(--navy)}
+    .job .role{font-weight:700;color:var(--blue)}
+    .job .date{font-size:.88rem;color:var(--muted);margin:3px 0 10px}
+    ul{padding-left:19px}
+    li{margin:5px 0}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{
+      background:var(--blue-soft);color:#1949a4;
+      padding:9px 13px;border-radius:999px;
+      font-weight:700;font-size:.88rem;
+    }
+
+    .info-list{list-style:none;padding:0}
+    .info-list li{padding:7px 0;border-bottom:1px solid #edf0f4}
+    .info-list li:last-child{border-bottom:0}
+
+    .languages{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .language{padding:16px;background:#f8fafc;border-radius:12px;border:1px solid var(--line)}
+    .language strong{display:block}
+
+    footer{
+      background:var(--navy);color:#cbd5e1;text-align:center;
+      padding:28px 0;font-size:.9rem;
+    }
+    footer strong{color:white}
+
+    @media(max-width:760px){
+      .hero{grid-template-columns:1fr}
+      .contact-card{min-width:0}
+      .grid{grid-template-columns:1fr}
+      nav .container{gap:16px}
+    }
+
+    @media print{
+      body{background:white}
+      nav{display:none}
+      header{background:white;color:black;padding:25px 0}
+      .headline{color:#333}
+      .contact-card{border:1px solid #ccc;color:#111}
+      .contact-card strong{color:#555}
+      .card,.about{box-shadow:none}
+      section{break-inside:avoid}
+    }
+  </style>
+</head>
+
+<body>
+  <header id="inicio">
+    <div class="container hero">
+      <div>
+        <div class="eyebrow">Currículum Vitae</div>
+        <h1>Santiago Orozco Salcedo</h1>
+        <p class="headline">
+          Estudiante de Ingeniería en Negocios | Manufactura | Logística | Análisis operativo
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div><strong>Teléfono</strong>33 3062 3482</div>
+        <div><strong>Correo</strong>orozcosalcedo33@gmail.com</div>
+        <div><strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/santiago-orozco-salcedo-84472b3b9" target="_blank" rel="noopener">
+            /santiago-orozco-salcedo
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="#perfil">Perfil</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#educacion">Educación</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#certificaciones">Cursos</a>
+      <a href="#adicional">Información adicional</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section id="perfil">
+      <h2 class="section-title">Perfil profesional</h2>
+      <div class="about">
+        Estudiante de Ingeniería en Negocios con experiencia en manufactura industrial y
+        operación alimentaria, incluyendo liderazgo de equipos y mejora de procesos.
+        Interesado en áreas administrativas, logística y análisis de datos mediante
+        herramientas como Excel. Busco desarrollarme profesionalmente aportando soluciones
+        operativas y analíticas dentro de entornos industriales o corporativos.
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <h2 class="section-title">Experiencia laboral</h2>
+
+      <div class="timeline">
+
+        <article class="job">
+          <h3>Royal Interpack</h3>
+          <div class="role">Materialista</div>
+          <div class="date">Abril 2026 — Actual</div>
+          <ul>
+            <li>Solicitud, suministro y control de materiales para las áreas de producción mediante vales.</li>
+            <li>Atención a requerimientos de operadoras, estiba y acomodo de pallets.</li>
+            <li>Llenado de órdenes de trabajo y generación de etiquetas para el registro y control de materiales, cajas y pallets.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Foxconn</h3>
+          <div class="role">Operador Especialista</div>
+          <div class="date">Octubre 2025 — Abril 2026</div>
+          <ul>
+            <li>Operación de prensas industriales para moldeo de materiales metálicos y aluminio.</li>
+            <li>Participación en procesos de manufactura y producción industrial.</li>
+            <li>Colaboración en equipos de producción para cumplimiento de objetivos operativos, estándares de calidad y seguridad provisional.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Qualtia Alimentos</h3>
+          <div class="role">Operador de Producción, Líder Área Cocina</div>
+          <div class="date">Enero 2025 — Agosto 2025</div>
+          <ul>
+            <li>Participación en procesos de manufactura alimentaria.</li>
+            <li>Capacitación de personal en área culinaria.</li>
+            <li>Supervisión de equipo de aproximadamente 10 personas.</li>
+            <li>Preparación de guisos y previos para ensamble de producción.</li>
+            <li>Apoyo en organización operativa del área.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>El Platanar</h3>
+          <div class="role">Cocinero</div>
+          <div class="date">Enero 2024 — Octubre 2024</div>
+          <ul>
+            <li>Preparación de alimentos y manejo de cocina operativa.</li>
+            <li>Elaboración de hamburguesas, hot dogs y platillos del menú.</li>
+            <li>Trabajo bajo presión y control de tiempos de servicio.</li>
+            <li>Atención a cliente.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="educacion">
+      <h2 class="section-title">Educación</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Ingeniería en Negocios</h3>
+          <div class="meta">En curso · Universidad de Guadalajara</div>
+          <p class="muted">Centro Universitario de Tlaquepaque</p>
+          <p class="muted">Cursando 3er semestre · Graduación estimada en 2029</p>
+        </div>
+        <div class="card">
+          <h3>Preparatoria San José del Valle UdeG</h3>
+          <div class="meta">Certificado 2025</div>
+          <p class="muted">Cursos de Empresa y Administración (Nivel Medio Superior)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="card">
+        <div class="skills">
+          <span class="skill">Microsoft Excel</span>
+          <span class="skill">Microsoft Office</span>
+          <span class="skill">Análisis básico de datos</span>
+          <span class="skill">Logística y cadena de suministro</span>
+          <span class="skill">Manufactura y procesos productivos</span>
+          <span class="skill">Liderazgo y gestión de personal</span>
+          <span class="skill">Trabajo en equipo</span>
+          <span class="skill">Organización operativa</span>
+          <span class="skill">Atención al cliente</span>
+          <span class="skill">Manejo de computadora</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificaciones">
+      <h2 class="section-title">Cursos y certificaciones</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Protección Civil</h3>
+          <p class="meta">Certificado 2023</p>
+          <p class="muted">Certificación en Protección Civil.</p>
+        </div>
+        <div class="card">
+          <h3>Microsoft Excel</h3>
+          <p class="meta">En formación</p>
+          <p class="muted">Cursos de Excel (Microsoft, Udemy).</p>
+        </div>
+        <div class="card">
+          <h3>Empresa y Administración</h3>
+          <p class="meta">Nivel Medio Superior</p>
+          <p class="muted">Formación realizada en Preparatoria San José del Valle UdeG.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Idiomas</h2>
+      <div class="languages">
+        <div class="language">
+          <strong>Español</strong>
+          <span class="muted">Nativo</span>
+        </div>
+        <div class="language">
+          <strong>Inglés</strong>
+          <span class="muted">Básico</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="adicional">
+      <h2 class="section-title">Información adicional</h2>
+      <div class="card">
+        <ul class="info-list">
+          <li><strong>Transporte propio:</strong> vehículo</li>
+          <li><strong>Disponibilidad:</strong> horario vespertino</li>
+          <li><strong>Experiencia:</strong> manufactura industrial y alimentaria</li>
+          <li><strong>Experiencia:</strong> cocina profesional</li>
+          <li><strong>Interés:</strong> análisis de negocios y datos</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Santiago Orozco Salcedo</strong><br>
+      Estudiante de Ingeniería en Negocios · Manufactura · Logística · Análisis operativo
+    </div>
+  </footer>
+</body>
+</html>
